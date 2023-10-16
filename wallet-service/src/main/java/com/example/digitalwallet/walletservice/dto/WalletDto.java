@@ -1,21 +1,16 @@
-package com.example.digitalwallet.walletservice.model;
+package com.example.digitalwallet.walletservice.dto;
 
-import jakarta.persistence.*;
 import lombok.*;
 
 import java.math.BigDecimal;
 
-@Entity
-@Table(name = "wallets")
+@Data
+@Builder
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-public class Wallet {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class WalletDto {
     private Long id;
     private String publicAddress;
     private String userId;

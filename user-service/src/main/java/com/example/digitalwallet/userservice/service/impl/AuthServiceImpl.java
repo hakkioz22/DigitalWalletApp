@@ -48,7 +48,6 @@ public class AuthServiceImpl implements AuthService {
         );
 
         AuthzClient authzClient = AuthzClient.create(authConfig);
-
         return authzClient.obtainAccessToken(username, password);
     }
 
